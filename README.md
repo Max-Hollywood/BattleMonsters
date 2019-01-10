@@ -1,4 +1,5 @@
 # BattleMonsters
+(work in progress)
 Battle Monsters!  An open source battle-ship game with a twist.
 Different levels of AI - some are easy, some are brutal.
 Different sized levels - some are small, some are huge.
