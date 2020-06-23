@@ -9,6 +9,8 @@ Different rules - enemies might move (hard setting), weapons might have differen
 Most of this has already been implemented in an assignment, so I have to rebuild it so I don't copyright infringe myself.
 Original implementation is command-line console, but we wanted to do a GUI and have some graphics.  That's the goal, so you can play either if you want.
 
+--------------
+
 > UDPDATE 2019-04-16
 
 ## Language
@@ -50,4 +52,42 @@ Original implementation is command-line console, but we wanted to do a GUI and h
 Yes, the most exciting part is watching AI players blast each other.
 Hopefully with a GUI, some graphics can be introduced (we wanted to do that in the original project, but had no time, and were disuaded to do so as well as the focus was on the I/O system and 2d arrays).
 The original project was mid 2017, and I've wanted to rebuild it since.
+
+--------------
+
+> UPDATE 2020-06-18
+
+## Decisions made
+Starting development after making some choices on initial implementation.
+
+Instead of doing any actual planning, jumping straight into creating file structure.
+
+- Java
+- MVC
+- Console based
+- Dependency injection
+
+--------------
+
+> UPDATE 2020-06-19
+
+## Graphical options
+UI options are either CLI or GUI.  CLI is obvious and easy, but what about GUI?
+- pre-made Java library?
+    - LITIengine?  (pure Java)
+    - A full and complex library with a lot of third party?
+- something simple and made myself (and probably very ugly)
+
+## Game difficulty
+Game difficulty should be more abstract and encompassing of how generally difficult it would be to actually play the game.  It should not influence the aspects of the game as I've previously mentioned.
+- Setting the AI _behaviour_ determines its **behaviour** (more human-like behaviour)
+- Setting the AI _difficulty_ determines **its available weapons** (more powerful weapons)
+- Setting the _board size_ determines **overall difficulty** (space between monsters)
+- Setting the AI _able to move_ determines the **overall difficulty** (the monsters can move to places you have already fired on)
+
+--------------
+
+> UPDATE 2020-06-23
+
+To increase difficulty, a Monster creator should be able to procedurally generate a random monster to keep the shapes unpredictable.
 
