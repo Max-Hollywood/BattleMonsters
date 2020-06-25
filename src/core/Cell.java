@@ -16,7 +16,7 @@ public class Cell
 	}
 	
 	/**
-	 * Set the contents of the cell.
+	 * Set the contents of the cell.  Use null to clear.
 	 *
 	 * @param monsterPart a part of a monster
 	 */
