@@ -25,10 +25,9 @@ public class Logging
 	 */
 	public static void Slag(Object caller, String variable, Object[] obj)
 	{
-		
-		for (Object o : obj)
+		for (int i = 0; i < obj.length; i++)
 		{
-			System.out.println("  [" + formatCaller(caller) + "] > " + variable + ": " + obj);
+			System.out.println("  [" + formatCaller(caller) + "] > " + variable + ": " + obj[i]);
 		}
 	}
 	
