@@ -97,6 +97,8 @@ Add obstacles - the game board has randomly placed and random shaped obstacles -
 
 Rewrite the readme.md to have revision and ideas history at the bottom, and update the current project at the top (I've been neglecting that).
 
+Don't forget that the game requires two sides of the board.  Player 1 sees their monsters on a board, and sees where they are trying to hit the opponent.  For Human vs. Human or AI vs AI the visible board can change to show that Player's board.  Also for Human vs Human the initial placement of the monsters can be hidden so that no one sees their own monsters after they are placed, to help with Hotseat play.
+
 ## Bugs/Fix
 Add bugs as they are found.  Strike them out `~~`~~bug~~`~~` when they are expected to be fixed.  Delete them when they are confirmed to be fixed in the next version.
 
