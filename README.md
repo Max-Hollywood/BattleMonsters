@@ -91,3 +91,27 @@ Game difficulty should be more abstract and encompassing of how generally diffic
 
 To increase difficulty, a Monster creator should be able to procedurally generate a random monster to keep the shapes unpredictable.
 
+> UPDATE 2020-06-25
+
+Add obstacles - the game board has randomly placed and random shaped obstacles - rocks, debris, buildings, whatever - that limit where a player can place their monsters, but also means that an attacker gets a false positive when they hit that location.
+
+Rewrite the readme.md to have revision and ideas history at the bottom, and update the current project at the top (I've been neglecting that).
+
+## Bugs/Fix
+Add bugs as they are found.  Strike them out `~~`~~bug~~`~~` when they are expected to be fixed.  Delete them when they are confirmed to be fixed in the next version.
+
+### Core
+
+### User interface
+
+### Monsters
+
+### Players
+
+### Weapons
+
+### AI Brains
+
+### Other
+- make the 2d array setting and getting (x or y first) consistent
+
