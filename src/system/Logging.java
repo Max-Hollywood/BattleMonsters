@@ -27,7 +27,7 @@ public class Logging
 	{
 		for (int i = 0; i < obj.length; i++)
 		{
-			System.out.println("  [" + formatCaller(caller) + "] > " + variable + ": " + obj[i]);
+			System.out.println("  [" + formatCaller(caller) + "] > " + variable + " [" + i + "]: " + obj[i]);
 		}
 	}
 	
