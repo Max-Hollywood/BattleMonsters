@@ -40,6 +40,7 @@ class GameBoardTest
 //		board.setCell(new Vector2(2, 2), new MonsterPart("╓"));
 //		board.setCell(new Vector2(3, 2), new MonsterPart("╖"));
 		Monster monster = MonsterFactory.createMonster(MonsterType.SQUARE_TAIL);
+		board.placeMonster(new Vector2(2, 3), monster);
 		Logging.Slag(this, "Size", new Integer[]{16, 5});
 		for (int iy = 0; iy < board.getSize().y; iy++)
 		{
