@@ -2,6 +2,8 @@ package core;
 
 // TODO: the board that holds the data
 
+import system.Logging;
+
 public class GameBoard
 {
 	private int width;
@@ -19,13 +21,13 @@ public class GameBoard
 		
 		this.width = width;
 		this.height = height;
-		this.cells = new Cell[this.width][this.height];
+		this.cells = new Cell[this.height][this.width];
 		
 		for (int iy = 0; iy < getSize().y; iy++)
 		{
 			for (int ix = 0; ix < getSize().x; ix++)
 			{
-				this.cells[ix][iy] = new Cell();
+				this.cells[iy][ix] = new Cell();
 			}
 		}
 	}
@@ -50,7 +52,7 @@ public class GameBoard
 	public void setCell(Vector2 position, MonsterPart shape)
 	{
 		
-		this.cells[position.x][position.y].setContents(shape);
+		this.cells[position.y][position.x].setContents(shape);
 	}
 	
 	public void placeMonster(Vector2 position, Monster monster)
@@ -60,10 +62,10 @@ public class GameBoard
 		{
 			for (int ix = 0; ix < monster.width; ix++)
 			{
-				if (monster.parts[ix][iy] != null)
+				if (monster.parts[iy][ix] != null)
 				{
 					// TODO: add vector2 adding to vector2 class
-					setCell(new Vector2(position.x + ix, position.y + iy), monster.parts[ix][iy]);
+					setCell(new Vector2(position.x + ix, position.y + iy), monster.parts[iy][ix]);
 				}
 			}
 		}

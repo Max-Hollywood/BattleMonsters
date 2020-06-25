@@ -113,5 +113,5 @@ Add bugs as they are found.  Strike them out `~~`~~bug~~`~~` when they are expec
 ### AI Brains
 
 ### Other
-- make the 2d array setting and getting (x or y first) consistent
+- ~~make the 2d array setting and getting (x or y first) consistent~~
 
