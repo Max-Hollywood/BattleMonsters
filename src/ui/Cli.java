@@ -2,6 +2,7 @@ package ui;
 
 import core.CellContents;
 import core.GameBoard;
+import core.PlayerAction;
 import interfaces.UserInterface;
 
 // TODO: command line interface
@@ -47,7 +48,20 @@ public class Cli implements UserInterface
 	}
 	
 	@Override
-	public void printMessage()
+	public PlayerAction askPlayerTurnNextAction()
+	{
+		// TODO: ask what the player wants to do
+		
+		PlayerAction action;
+		System.out.println(" > What do you want to do?");
+		System.out.println("   (M)ove monster\n   (A)ttack a location\n   (S)elect weapon\n   (R)eturn to the main menu\n   (Q)uit the game");
+		System.out.println(" > You have selected (Q)uit the game.");
+		action = new PlayerAction(PlayerAction.PlayerActionType.EXIT_GAME);
+		return action;
+	}
+	
+	@Override
+	public void askPlayerTurnAttackLocation()
 	{
 	
 	}

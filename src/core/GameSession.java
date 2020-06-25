@@ -4,6 +4,7 @@ package core;
 
 import interfaces.UserInterface;
 import players.Player;
+import system.Logging;
 
 public class GameSession
 {
@@ -11,6 +12,7 @@ public class GameSession
 	private Player player1;
 	private Player player2;
 	private UserInterface ui;
+	private boolean running = true;
 	
 	public GameSession(UserInterface ui)
 	{
@@ -38,17 +40,44 @@ public class GameSession
 	
 	public void renderGameSession()
 	{
+		
 		this.ui.drawBoard(this.board);
 		
 	}
 	
 	public void placeMonster(Vector2 position, Monster monster)
 	{
+		
 		board.placeMonster(position, monster);
 	}
 	
 	public void runGameLoop()
 	{
-	
+		
+		while (running == true)
+		{
+		/*
+			1. Tell the next player it's their turn
+			2. Ask where to attack
+			3. Get the input to attack
+			4. Attack that position
+			5. Return the results
+			6. Set the board and score and damage that monster
+			7. Select the next player
+		 */
+			
+			PlayerAction action = ui.askPlayerTurnNextAction();
+			
+			if (action.getActionType() == PlayerAction.PlayerActionType.EXIT_GAME)
+			{
+				running = false;
+			}
+			else if (action.getActionType() == PlayerAction.PlayerActionType.ATTACK_LOCATION)
+			{
+				ui.askPlayerTurnAttackLocation();
+			}
+		}
+		
+		Logging.Slog(this, "Game loop has ended.");
 	}
 }
