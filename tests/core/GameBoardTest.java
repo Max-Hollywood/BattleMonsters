@@ -1,31 +1,31 @@
 package core;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.AfterEach;
+//import org.junit.jupiter.api.BeforeEach;
+//import org.junit.jupiter.api.Test;
 import system.Logging;
 import ui.Cli;
 
-import static org.junit.jupiter.api.Assertions.*;
+//import static org.junit.jupiter.api.Assertions.*;
 
 class GameBoardTest
 {
 	
-	@BeforeEach
+//	@BeforeEach
 	void setUp()
 	{
 		
 		System.out.println("Starting [ GameBoard ] test.");
 	}
 	
-	@AfterEach
+//	@AfterEach
 	void tearDown()
 	{
 		
 		System.out.println("Ending [ GameBoard ] test.");
 	}
 	
-	@Test
+//	@Test
 	void GameBoardTest()
 	{
 		

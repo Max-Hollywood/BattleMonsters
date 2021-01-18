@@ -7,6 +7,7 @@ public class PlayerAction
 {
 	public enum PlayerActionType
 	{
+		WAITING,
 		MOVE_MONSTER,
 		SELECT_WEAPON,
 		ATTACK_LOCATION,

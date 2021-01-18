@@ -5,10 +5,17 @@ import core.GameBoard;
 import core.PlayerAction;
 import interfaces.UserInterface;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 // TODO: command line interface
 
 public class Cli implements UserInterface
 {
+	private InputStreamReader isr = new InputStreamReader(System.in);
+	private BufferedReader br = new BufferedReader(isr);
+
 	public Cli()
 	{
 	
@@ -52,17 +59,31 @@ public class Cli implements UserInterface
 	{
 		// TODO: ask what the player wants to do
 		
-		PlayerAction action;
+		PlayerAction action = new PlayerAction(PlayerAction.PlayerActionType.WAITING);
 		System.out.println(" > What do you want to do?");
 		System.out.println("   (M)ove monster\n   (A)ttack a location\n   (S)elect weapon\n   (R)eturn to the main menu\n   (Q)uit the game");
 		System.out.println(" > You have selected (Q)uit the game.");
-		action = new PlayerAction(PlayerAction.PlayerActionType.EXIT_GAME);
+		try
+		{
+			if (br.readLine().equals("a"))
+			{
+				action = new PlayerAction(PlayerAction.PlayerActionType.ATTACK_LOCATION);
+			}
+			else if (br.readLine().equals("q"))
+			{
+				action = new PlayerAction(PlayerAction.PlayerActionType.EXIT_GAME);
+			}
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
 		return action;
 	}
 	
 	@Override
 	public void askPlayerTurnAttackLocation()
 	{
-	
+		System.out.println("attack...");
 	}
 }

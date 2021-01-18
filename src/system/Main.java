@@ -55,7 +55,7 @@ public class Main
 			{
 				Vector2 size = new Vector2(40, 6);
 				session.newGame(size, PlayerFactory.createAiEasy(size), PlayerFactory.createAiEasy(size));
-				
+				session.runGameLoop();
 				session.renderGameSession();
 			}
 		}

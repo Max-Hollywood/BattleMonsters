@@ -29,10 +29,6 @@ public class GameSession
 
 		// TODO: this is testing the system
 		placeMonster(new Vector2(3, 3), MonsterFactory.createMonster(MonsterType.SQUARE_TAIL));
-
-		// TODO: run a loop to draw and place the monsters
-		
-		runGameLoop();
 	}
 	
 	public Vector2 getBoardSize()
