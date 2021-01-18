@@ -26,8 +26,11 @@ public class GameSession
 		this.board = new GameBoard(size.x, size.y);
 		this.player1 = player1;
 		this.player2 = player2;
-		
+
+		// TODO: this is testing the system
 		placeMonster(new Vector2(3, 3), MonsterFactory.createMonster(MonsterType.SQUARE_TAIL));
+
+		// TODO: run a loop to draw and place the monsters
 		
 		runGameLoop();
 	}
